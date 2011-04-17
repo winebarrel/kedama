@@ -82,12 +82,18 @@ module Kedama
   end # ConsitentHash
 
   class Nodes
+    attr_reader :nodes
+
     def initialize
       @nodes = {}
     end
 
     def add(name, weight)
       @nodes[name.to_str] = weight.to_int
+    end
+
+    def delete(name)
+      @nodes.delete(name)
     end
 
     def to_hash
