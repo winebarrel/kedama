@@ -21,7 +21,7 @@ gem install kedama
   nodes.add('5.6.7.8:11211',  300)
   nodes.add('9.8.7.6:11211', 1500)
   
-  hash = nodes.to_hash
+  hash = nodes.to_h
   
   10.times do |i|
     i = i.to_s
@@ -32,7 +32,7 @@ gem install kedama
   
   nodes.delete('5.6.7.8:11211')
   
-  hash = nodes.to_hash
+  hash = nodes.to_h
   
   10.times do |i|
     i = i.to_s
