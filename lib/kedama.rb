@@ -96,7 +96,7 @@ module Kedama
       @nodes.delete(name)
     end
 
-    def to_hash
+    def to_h
       ConsitentHash.new(@nodes)
     end
   end # Nodes
