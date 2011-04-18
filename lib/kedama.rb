@@ -88,7 +88,7 @@ module Kedama
       @nodes = {}
     end
 
-    def add(name, weight)
+    def add(name, weight = 1)
       @nodes[name.to_str] = weight.to_int
     end
 
