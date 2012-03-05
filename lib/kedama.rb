@@ -37,7 +37,7 @@ module Kedama
 
     private
     def hash_values(str)
-      digest = Digest::MD5.digest(str)
+      digest = Digest::MD5.digest(str).bytes.to_a
       hs = []
 
       until digest.empty?
@@ -49,7 +49,7 @@ module Kedama
     end
 
     def hashi(str)
-      digest = Digest::MD5.digest(str)
+      digest = Digest::MD5.digest(str).bytes.to_a
       (digest[3] << 24) + (digest[2] << 16) + (digest[1] << 8) + digest[0]
     end
 
